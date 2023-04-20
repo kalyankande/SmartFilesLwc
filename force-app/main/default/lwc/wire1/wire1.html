@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Account Records" icon-name="standard:contact">
+        <template if:true={account.data}>
+            <div class="slds-var-m-around_medium">
+                <p>{Name}</p>
+                <p>{Type}</p>
+                <p>{Industry}</p>
+                <p>{BillingAddress}</p>
+                <p>{AnnualRevenue}</p>
+                <p><lightning-formatted-phone value={phone}></lightning-formatted-phone></p>
+            </div>
+        </template>
+       
+    </lightning-card>
+</template>

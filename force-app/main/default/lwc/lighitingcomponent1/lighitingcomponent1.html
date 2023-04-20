@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="HELLO WORLD">
+        <lightning-input name="Name" label="Name" value={name} onchange={handleNameChange}></lightning-input>
+        Hello  {name}.
+        <lightning-button name="click me" label="click Me" onclick={handleButtonClick}></lightning-button>
+
+    </lightning-card>
+
+    <lightning-combobox
+            name="progress"
+            label="Status"
+            value={value}
+            placeholder="Select Progress"
+            options={options}
+            onchange={handleChange} ></lightning-combobox>
+
+    <p>Selected color is: {value}</p>
+
+    
+</template>

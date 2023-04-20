@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Form" icon-name="standard:record"> 
+        <div class="slds-var-m-around_medium">
+        <lightning-input label="First Name" type="text" onchange={handleNameChange}></lightning-input>
+        <lightning-input label="Last Name" type="text" required="true" onchange={handleNameChange}></lightning-input>
+        <lightning-input label="Email" type="email" required="true" onchange={handleNameChange}></lightning-input>
+        <lightning-input label="Birthdate" type="date" onchange={handleNameChange}></lightning-input>
+        <lightning-input name="phone" class="validate" type="tel" label="Phone" pattern="[0-9]{10}$" message-when-pattern-mismatch="Please enter a valid phone number" required></lightning-input>
+        <lightning-button label="Save" variant="brand" onclick={createContact}></lightning-button>
+        </div>
+    </lightning-card>
+</template>

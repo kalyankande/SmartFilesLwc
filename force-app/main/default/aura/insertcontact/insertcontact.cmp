@@ -1,0 +1,25 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<div class="slds-m-around--xx-large">
+        <lightning:card title="Contact" iconName="standard:contact" class="slds-p-around_medium">
+            <lightning:recordEditForm aura:id="recordEditForm"
+                                      objectApiName="Contact"
+                                      onload="{!c.handleOnLoad}"
+                                      onsubmit="{!c.handleOnSubmit}"
+                                      onsuccess="{!c.handleOnSuccess}"
+                                      onerror="{!c.handleOnError}">
+                <lightning:messages/>
+                <div class="slds-grid">
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:inputField fieldName="FirstName"/>
+                        <lightning:inputField fieldName="Email"/>
+                    </div>
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:inputField fieldName="LastName"/>
+                        <lightning:inputField fieldName="Phone"/>
+                    </div>
+                </div>
+                <lightning:button label="Add Contact" type="submit" class="slds-m-top_small"/>
+            </lightning:recordEditForm>
+        </lightning:card>
+    </div>
+</aura:component>

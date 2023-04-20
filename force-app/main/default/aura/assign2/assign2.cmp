@@ -1,0 +1,14 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    
+    <aura:attribute name="fname" type="Integer"/>
+    <aura:attribute name="lname" type="Integer"/>
+    <aura:attribute name="fullname" type="Integer"/>
+    
+    NUM1: <ui:inputText value="{!v.fname}"/>
+    <br/>
+    NUM2: <ui:inputText value="{!v.lname}"/>
+    <br/>
+    <ui:button label="click me " press="{!c.fullname}" />
+    <br/>
+    TOTAL: {!v.fullname}
+</aura:component>

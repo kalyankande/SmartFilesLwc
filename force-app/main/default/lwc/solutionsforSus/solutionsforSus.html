@@ -1,0 +1,33 @@
+<template>
+    <template if:true={dispalyData}>
+        <lightning-card title="Solutions for Carbon Foot Print" >
+            <div class="slds-col slds-size_6-of-12 slds-p-horizontal--small slds-m-bottom--medium">
+                <template for:each={displayText} for:item="task">
+                    <lightning-layout key={task.id}>
+                        <lightning-layout-item padding="around-medium">
+                            <lightning-input 
+                            type="checkbox"
+                            label={task.Solution__c}
+                            value={task.Id}
+                            
+                            onchange={handleCheckboxChange}></lightning-input>
+                            
+                        </lightning-layout-item>
+                        <lightning-layout-item padding="around-small">
+                            <lightning-helptext  content={task.Description__c}></lightning-helptext>
+                            
+                        </lightning-layout-item>
+                    </lightning-layout>
+                </template>
+                <lightning-button variant="brand" label="Submit" title="Submit" onclick={handleSaveClick} class="slds-m-left_x-small"></lightning-button>
+            </div>
+        </lightning-card>
+    </template>
+    <template if:false={dispalyData}>
+        
+        <lightning-card title="Solutions for Carbon Foot Print">
+            <h1>Noting to display here, go and check tasks</h1>
+        </lightning-card>
+    </template>
+    
+</template>

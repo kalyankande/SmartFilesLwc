@@ -1,0 +1,56 @@
+<aura:component >
+    
+    <div class="c-container">
+        <lightning:layout pullToBoundary="medium"  >
+            <lightning:layoutItem flexibility="auto" >
+                <div class="custom-box">Fruits Name</div>
+            </lightning:layoutItem>
+        </lightning:layout>
+    </div>
+        <div class="c-container">
+        <lightning:layout pullToBoundary="medium">
+            <lightning:layoutItem flexibility="auto" padding="horizontal-medium">
+                <div class="custom-box">Apple</div>
+            </lightning:layoutItem>
+            <lightning:layoutItem flexibility="auto" padding="horizontal-medium">
+                <div class="custom-box">WaterMelon</div>
+            </lightning:layoutItem>
+            <lightning:layoutItem flexibility="auto" padding="horizontal-medium">
+                <div class="custom-box">Pineapple</div>
+            </lightning:layoutItem>
+        </lightning:layout>
+    </div>
+    <div class="c-container">
+        <lightning:layout pullToBoundary="medium">
+            <lightning:layoutItem flexibility="auto" padding="horizontal-medium">
+                <div class="custom-box">Guava</div>
+            </lightning:layoutItem>
+            <lightning:layoutItem flexibility="auto" padding="horizontal-medium">
+                <div class="custom-box">Sweet Lime</div>
+            </lightning:layoutItem>
+            <lightning:layoutItem flexibility="auto" padding="horizontal-medium">
+                <div class="custom-box">papaya</div>
+            </lightning:layoutItem>
+        </lightning:layout>
+    </div>
+    <div class="c-container">
+        <lightning:layout pullToBoundary="medium">
+            <lightning:layoutItem flexibility="auto" padding="horizontal-medium">
+                <div class="custom-box">Grapes</div>
+            </lightning:layoutItem>
+            <lightning:layoutItem flexibility="auto" padding="horizontal-medium">
+                <div class="custom-box">Orange</div>
+            </lightning:layoutItem>
+            <lightning:layoutItem flexibility="auto" padding="horizontal-medium">
+                <div class="custom-box">Lemon</div>
+            </lightning:layoutItem>
+        </lightning:layout>
+    </div>
+    <div class="c-container">
+        <lightning:layout pullToBoundary="medium">
+            <lightning:layoutItem flexibility="auto" >
+                <div class="custom-box">Enough Fruits for Today</div>
+            </lightning:layoutItem>
+        </lightning:layout>
+    </div>
+</aura:component>

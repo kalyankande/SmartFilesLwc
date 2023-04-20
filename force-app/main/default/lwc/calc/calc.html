@@ -1,0 +1,22 @@
+<template>
+    <div class="slds-grid slds-gutters slds-wrap">
+      <div class="slds-col  slds-visual-picker slds-visual-picker_small">
+        <lightning-radio-group name="operGroup" label="Operation" options={operOpt} value={oper} required  type="button" onchange={handleChangeOper}>
+        </lightning-radio-group>
+        </div>
+        <div class="slds-col slds-size_1-of-1">
+            <lightning-input label="Number 1" name="num1" onchange={handleChangeNum1}></lightning-input>
+            <strong>[{oper}]</strong>
+            <lightning-input label="Number 2" name="num2" onchange={handleChangeNum2}></lightning-input>
+        </div>
+  
+      <div class="slds-col slds-size_1-of-1">
+        <lightning-input
+          label="Result"
+          name="result"
+          read-only="true"
+          value={result}></lightning-input>
+        
+      </div>
+    </div>
+  </template>

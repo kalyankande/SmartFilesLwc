@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Cricketers">
+        <div class="slds-m-around_medium">
+            
+            <p class="slds-text-title_bold">Players:</p>
+            <br>
+            <template for:each={lstAccounts} for:item="acc">
+                <p key={acc.Id} style="display:inline">
+                    <lightning-badge label={acc.Name}></lightning-badge>
+                </p>
+            </template>
+            </div>
+            </lightning-card>
+</template>

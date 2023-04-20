@@ -1,0 +1,17 @@
+<template>
+     <lightning-card title="Opportunity Owner Performance" icon-name="standard:opportunity">
+    <div class="slds-m-around_medium">
+    <template if:true={ownerPerformance}>
+ <lightning-datatable
+        key-field="OwnerId"
+         data={ownerPerformance}
+    columns={columns}
+     hide-checkbox-column
+     ></lightning-datatable>
+         </template>
+    <template if:true={noData}>
+   <div>No data available.</div>
+   </template>
+   </div>
+   </lightning-card>
+    </template>

@@ -1,0 +1,25 @@
+<aura:component controller="FetchContacts" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="contacts" type="Contact[]"  />
+    <aura:registerEvent name="cmpEvent" type="c:ContactTableEvent"/>
+    <aura:dependency resource="markup://force:navigateToSObject" type="EVENT"/>
+    <aura:handler name="init" value="{!this}" action="{!c.fetchContact}" />
+    <table border="1">
+        <tr>
+            <td><b>Name</b></td>
+            <td><b>Phone Number</b></td>
+            <td><b>Annual Revenue</b></td>
+            <td><b>Website</b></td>
+        </tr>
+        <aura:iteration items="{!v.contacts}" var="con" >
+            <tr>
+                <td><b>{!con.FirstName}</b></td>
+                <td><b>{!con.LastName}</b></td>
+                <td><b>{!con.Email}</b></td>
+                <td><b>{!con.Phone}</b></td>
+                <td><b><lightning:button variant="brand"
+                             label="Show Details"
+                             onclick="{!c.fireComponentEvent}" value="{!con.Id}"/></b></td>
+            </tr>
+        </aura:iteration>
+    </table>
+</aura:component>

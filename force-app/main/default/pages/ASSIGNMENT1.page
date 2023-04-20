@@ -1,0 +1,13 @@
+<apex:page standardcontroller="Account" extensions="vf1class">
+<script>
+    function myFunction(){
+        callMethod(0);
+    }
+</script>
+<apex:form >
+<apex:pageBlock >
+<apex:actionFunction name="callMethod" action="{!callMethod}"/>
+<apex:CommandButton value="Delete Contacts" onclick="myFunction()" oncomplete="return null;"/>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

@@ -1,0 +1,10 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction"  access="global">
+    <aura:registerEvent name="cmpEvent" type="c:cmpEvent"/>
+    <lightning:card title="Component Event 1"  class="slds-p-around_medium"> 
+        <h1>Simple Component Event Sample</h1><br/>
+        <p> <lightning:button variant="brand"
+                              label="Click here to fire a component event"
+                              onclick="{!c.fireComponentEvent}"/>
+        </p>
+    </lightning:card>
+</aura:component>

@@ -1,0 +1,17 @@
+<apex:page standardController="Contact" extensions="exclass">
+
+   <apex:form >
+     <apex:pageBlock title="Create Account and Contact">
+     <apex:pageBlockSection >
+     <apex:inputField value="{!newCon.FirstName}"/>
+     <apex:inputField value="{!newCon.LastName}"/>
+     <apex:inputField value="{!newCon.Phone }"/>
+     </apex:pageBlockSection>
+     <apex:pageBlockButtons >
+     <apex:commandButton title="Save" action="{!save}" rerender=""/>
+     </apex:pageBlockButtons>
+     </apex:pageBlock>
+
+   </apex:form>
+
+</apex:page>

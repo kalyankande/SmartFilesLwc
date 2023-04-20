@@ -1,0 +1,10 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction"  access="global">
+    <aura:registerEvent name="appEvent" type="c:applicationEvent"/>
+    <lightning:card title="Application Event 1"  class="slds-p-around_medium"> 
+        <h1>Simple Application Event Sample</h1><br/>
+        <p><lightning:button variant="brand"
+                             label="Click here to fire a application event"
+                             onclick="{!c.fireApplicationEvent}"/>
+        </p>
+    </lightning:card>
+</aura:component>

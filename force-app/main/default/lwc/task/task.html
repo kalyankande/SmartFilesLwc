@@ -1,0 +1,40 @@
+<template>
+    <lightning-input class="inputName" label="EnterTask" type="string"> 
+    </lightning-input>
+    <lightning-button variant="success" 
+                        label="+" 
+                        title="Successful action" 
+                        onclick={handleClick} 
+                        class="slds-m-left_x-small">
+    </lightning-button>
+    
+
+    <div class="c-container">
+        <lightning-layout horizontal-align="space">
+            <lightning-layout-item padding="around-large" size="6">
+                <lightning-card title="TASKS LIST" icon-name="custom:custom14">
+                    <ul class="slds-m-around_medium">
+                        <template for:each={tasklist} for:item="task">
+                            <li key={task}>
+                                <lightning-input label={task} class="slds-p-left_xx-large" type="checkbox" onchange={handleChange} >
+                                </lightning-input>
+                            </li>
+                        </template>
+                     </ul>
+                </lightning-card>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-large" size="6">
+                <lightning-card title="DONE LIST" icon-name="custom:custom14">
+        <ul class="slds-m-around_medium">
+            <template for:each={donelist} for:item="task">
+                 <li key={task}>
+                    <lightning-badge label={task}></lightning-badge>
+                </li>
+            </template>
+        </ul>
+    </lightning-card>
+            </lightning-layout-item>
+        </lightning-layout>
+    </div>
+
+</template>

@@ -1,0 +1,21 @@
+<aura:component controller="fetchBooking" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="bookings" type="Booking__c[]"/>
+    <lightning:card title="Bikes and Booking Details">
+        <div class="slds-m-around_x-large">
+            <lightning:accordion> 
+                <aura:iteration items="{!v.bookings}" var="book">
+                    <lightning:accordionSection name="{!book.Bike__r.Name}" label="{!book.Bike__r.Name}">
+                        <aura:set attribute="body">
+                            <p><b>Booking Name</b>:{!book.Name}</p>
+                            <p><b>Booking Time</b>:{!book.BookingTime__c}</p>
+                            <p><b>Distance KMs</b>:{!book.DistanceKMs__c}</p>
+                            <p><b>Customer Name</b>:{!book.Customer__r.Name}</p>
+                            <p><b>Customer Status</b>:{!book.Customer_r.Status_c}</p>
+                        </aura:set>
+                    </lightning:accordionSection>
+                </aura:iteration>
+            </lightning:accordion>
+        </div>
+    </lightning:card>
+</aura:component>

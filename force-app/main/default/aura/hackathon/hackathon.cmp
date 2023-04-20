@@ -1,0 +1,23 @@
+<aura:component controller="task1hackclass" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<aura:attribute name="hubs" type="Booking__c[]" />
+    <lightning:button onclick="{!c.handleBikeName}" label="hub"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />	
+	<table class="slds-table slds-table--bordered slds-table--striped slds-table--cell-buffer">
+        <thead>          
+            <tr class="slds-text-heading--small"> 
+                <th scope="col"><span class="slds-truncate">Name</span></th>
+                <th scope="col"><span class="slds-truncate">Active</span></th>
+                <th scope="col"><span class="slds-truncate">Rating</span></th>
+            </tr>           
+        </thead>
+        <tbody>
+            <aura:iteration items="{!v.hubs}" var="hu">
+                <tr>                  
+                   <td><b><a data-id="{!hu.Id}" onclick="{!c.displayDetails}">{!hu.Name}</a></b></td>                                     
+                    <td>{!hu.Active__c}</td>
+                    <td style="{!'background-color:'+hu.Color__c+''}">{!hu.Rating__c}</td>                     
+                </tr>
+            </aura:iteration>
+        </tbody>
+    </table>
+</aura:component>

@@ -1,0 +1,10 @@
+<template>
+    <lightning-input class="inputAmount" label="EnterAmount">
+    </lightning-input>
+    <lightning-button label="Search" onclick={searchString}> </lightning-button>
+    <lightning-datatable
+        key-field="Id"
+        data={opp}
+        columns={columns}>
+    </lightning-datatable>
+</template>
